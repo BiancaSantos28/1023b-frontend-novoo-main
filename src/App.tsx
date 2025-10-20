@@ -12,7 +12,7 @@ type ProdutoType = {
 function App() {
   const [produtos, setProdutos] = useState<ProdutoType[]>([])
   useEffect(() => {
-    api.get('/produtos')
+    api.get("/produtos")
       .then((response) => setProdutos(response.data))
       .catch((error) => console.error('Error fetching data:', error))
   }, [])
